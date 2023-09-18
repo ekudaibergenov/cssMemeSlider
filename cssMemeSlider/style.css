@@ -17,7 +17,6 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    box-sizing: border-box;
 }
 html {
     background-color: var(--grey);
@@ -75,21 +74,25 @@ html {
     display: flex;
     gap: 0.625rem;
 }
-
 .nav__bar {
+    padding: 0.5rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.nav__bar span {
     border-radius: 50%;
     width: 1.25rem;
     height: 1.25rem;
     background-color: var(--control);
     border: 0.125rem solid var(--control);
-    cursor: pointer;
     transition: all 0.6s ease;
 }
-.nav__bar:hover {
+.nav__bar:hover span{
     background-color: white;
     border: 0.125rem solid white;
 }
-.nav__bar:active {
+.nav__bar:active span{
     background-color: grey;
 }
 
@@ -97,7 +100,7 @@ html {
     display: none;
 }
 
-#r1:checked ~ .slider__bottom .nav #l1 {
+#r1:checked ~ .slider__bottom .nav #l1 span{
     background-color: var(--grey);
 }
 
@@ -106,7 +109,7 @@ html {
 #r2:checked ~ .slider__slides #s1 {
     margin-left: -100%;
 }
-#r2:checked ~ .slider__bottom .nav #l2 {
+#r2:checked ~ .slider__bottom .nav #l2 span{
     background-color: var(--grey);
 }
 #r2:checked ~ .slider__bottom .slider__text {
@@ -121,7 +124,7 @@ html {
 #r3:checked ~ .slider__slides #s1 {
     margin-left: -200%;
 }
-#r3:checked ~ .slider__bottom .nav #l3 {
+#r3:checked ~ .slider__bottom .nav #l3 span{
     background-color: var(--grey);
 }
 #r3:checked ~ .slider__bottom .slider__text {
@@ -136,7 +139,7 @@ html {
 #r4:checked ~ .slider__slides #s1 {
     margin-left: -300%;
 }
-#r4:checked ~ .slider__bottom .nav #l4 {
+#r4:checked ~ .slider__bottom .nav #l4 span{
     background-color: var(--grey);
 }
 #r4:checked ~ .slider__bottom .slider__text {
