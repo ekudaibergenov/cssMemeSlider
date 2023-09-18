@@ -89,6 +89,9 @@ html {
     background-color: white;
     border: 0.125rem solid white;
 }
+.nav__bar:active {
+    background-color: grey;
+}
 
 #r1, #r2, #r3, #r4 {
     display: none;
